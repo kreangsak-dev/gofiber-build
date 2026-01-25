@@ -15,7 +15,7 @@ $env:CGO_ENABLED = "0": ปิดการใช้ C Library เพื่อใ
 
 ## Run on Linux
 ```
-chmod +x myapp-linux
+sudo chmod +x myapp-linux
 ./myapp-linux
 ```
 
