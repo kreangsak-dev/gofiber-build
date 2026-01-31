@@ -13,6 +13,11 @@ $env:CGO_ENABLED = "0": ปิดการใช้ C Library เพื่อใ
 -o myapp-linux: ตั้งชื่อไฟล์ output ว่า myapp-linux (จะไม่มีนามสกุล .exe)
 ```
 
+## Build on Macbox M4 ARM
+```
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w" -o myapp main.go
+```
+
 ## Run on Linux
 ```
 sudo chmod +x myapp-linux
