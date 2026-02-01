@@ -1,4 +1,39 @@
-# Go Fiber build on windows for run on linux server
+# Go Fiber
+## Install Setup
+```
+# โปรเจคส่วนตัว
+go mod init myapp
+
+# ถ้าจะ publish ขึ้น GitHub
+go mod init github.com/username/project-name
+
+# ติดตั้ง dependencies
+go get github.com/gofiber/fiber/v2
+
+# จัดระเบียบ dependencies
+go mod tidy 
+```
+
+## Live reload with Air
+```
+https://github.com/air-verse/air
+```
+```
+go install github.com/air-verse/air@latest
+air init
+
+# run go project
+air
+```
+### .air.toml
+```
+[build]
+  cmd = "go build -o ./tmp/main.exe ./cmd/server"
+  delay = 200
+  exclude_dir = ["assets", "tmp", "vendor", "testdata", "node_modules", "web"]
+```
+
+# Go Fiber Build on windows for run on linux server
 ## Build on windows with PowerShell
 ``` PowerShell
 $env:GOOS = "linux"
