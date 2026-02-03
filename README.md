@@ -22,6 +22,10 @@ https://github.com/air-verse/air
 go install github.com/air-verse/air@latest
 air init
 
+# สำหรับ zsh (default บน macOS)
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.zshrc
+source ~/.zshrc
+
 # run go project
 air
 ```
